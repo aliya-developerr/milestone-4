@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder by Aliya Fasih</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="bg-gray-100 flex flex-col items-center py-10">
+
+  
+    <!-- Header -->
+    <header class="mb-10 text-center">
+        <h1 class="text-4xl font-extrabold text-blue-800 header animate-fade-in">CV Builder by Aliya Fasih</h1>
+    </header>
+
+    <!-- Main Container -->
+    <div id="cvContent" class="w-full max-w-4xl bg-white shadow-lg rounded-lg p-8 mx-4 animate-fade-in">
+        <!-- Profile Image Upload -->
+        <section class="mb-8 animate-slide-up text-center">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Profile Image</h2>
+            <input type="file" id="profileImage" accept="image/*" class="p-2 border border-gray-300 rounded-lg">
+        </section>
+
+        <!-- Personal Information Section -->
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Personal Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" id="fullName" placeholder="Full Name" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="email" id="email" placeholder="Email" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="tel" id="phone" placeholder="Phone Number" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="address" placeholder="Address" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="linkedin" placeholder="LinkedIn Profile" class="p-4 border border-gray-300 rounded-lg input-field">
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Education</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" id="degree" placeholder="Degree" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="institution" placeholder="Institution" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="gradYear" placeholder="Year of Graduation" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="gpa" placeholder="GPA" class="p-4 border border-gray-300 rounded-lg input-field">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" id="skill" placeholder="Skill" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="proficiency" placeholder="Proficiency Level" class="p-4 border border-gray-300 rounded-lg input-field">
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6">Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" id="jobTitle" placeholder="Job Title" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="company" placeholder="Company" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="yearsExp" placeholder="Years of Experience" class="p-4 border border-gray-300 rounded-lg input-field">
+                <input type="text" id="responsibilities" placeholder="Key Responsibilities" class="p-4 border border-gray-300 rounded-lg input-field">
+            </div>
+        </section>
+
+        <!-- Generate CV Button -->
+        <section class="text-center">
+            <button id="generateCV" class="bg-blue-600 text-white px-8 py-4 rounded-lg shadow-lg button animate-scale">Generate CV</button>
+        </section>
+
+        <!-- CV Preview Section -->
+        <section id="cvPreview" class="hidden mt-10">
+            <h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">Preview</h2>
+            <img id="cvImage" class="w-full max-w-4xl mx-auto" />
+            <div class="button-group">
+                <button id="downloadCV" class="bg-blue-600 text-white px-8 py-4 rounded-lg shadow-lg button animate-scale">Download CV</button>
+                <button id="viewLiveCV" class="bg-green-600 text-white px-8 py-4 rounded-lg shadow-lg button animate-scale">View Live CV</button>
+            </div>
+            <p class="text-center mt-4">If you want to make any changes, please update the fields above and click "Generate CV" again.</p>
+        </section>
+    </div>
+    <script src="./app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
